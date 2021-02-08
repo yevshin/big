@@ -82,6 +82,17 @@ publishing {
             artifact sourcesJar
         }
     }
+
+   repositories {
+     maven {
+       name 'nexus-thirdparty'
+       url 'http://nexus.dote.ru/nexus/content/repositories/thirdparty/'
+       credentials {
+        username = nexusUser
+        password = nexusPassword
+      }
+     }
+   }
 }
 
 bintray {
